@@ -1,0 +1,26 @@
+Verb usage/meaning finder
+-------------------------
+
+If you access this API https://en.wiktionary.org/w/api.php?format=json&action=query&titles=gripe&rvprop=content&prop=revisions&redirects=1
+you will get a json response that is rendered in page https://en.wiktionary.org/wiki/gripe.
+
+This page (https://en.wiktionary.org/wiki/gripe) accesses the above API and gets the response and formats it as shown in the web page.
+
+What you are expected to do is write a script that
+
+1] Will take a word as input
+2] Invoke the above API (instead of gripe in the above example, replace with your word - rest of params can stay the same)
+3] Pull the section titled ==English== (as there can be several languages - each delmited by the ==<Language>== format.  
+   For the above example of gripe, the English section extends from ==English== to ==North Frisian==.  Instead of ==North Frisian== it can be any ==<Language>==.  
+   What you are guaranteed is that it will be enclosed between double "="; ie ==
+4] Under the English section locate Verb subsection; this could be started with the text ===Verb=== or ====Verb====.  
+   Under the verb subsection, find the first line that begins with a # (not ## or ###) and print that line as the meaning of the verb.  
+   That would be meaning/usage of the verb.
+5] If English section or the Verb subsection under English section does not exist, print an error
+
+Some pointers/hints
+-------------------
+
+Line breaks are denoted by \n in the response from the API
+It would help if you take one of the API responses and indent it VI using the number of "=" as indents.   
+That is, the wiki format uses the number of "=" to specify indents for the headings.You can correlate by looking at the webpage
