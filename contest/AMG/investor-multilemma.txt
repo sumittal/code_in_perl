@@ -1,0 +1,38 @@
+Instructions:
+===============
+[1] You can choose to solve this question in any other programming language that you are comfortable with.
+[2] Ensure that you document the logic in a few lines before you attempt to code it.
+[3] Ensure code is indented properly to enable readability.
+===============
+
+===
+3. Write a Java program for the following problem.
+
+Dhankaam wants to make money in the stock market. He wants to invest Rs.1000 on various stocks so that he maximises his profit. He does some research and makes a table of companies whose stocks he is interested in buying, along with their current prices and expected prices after a month. Given the limited money he has (Rs.1000), he is averse to risk and would not like to buy more than one stock of any company.
+
+Knowing that you are a top geek, he requests you to create a program that would help him purchase the optimal mix of stocks from those chosen set of companies. He tells you that he would like to maximise the utilisation of the investable money he has (i.e., the amount of money invested should be as close to Rs.1000 as possible).
+
+Dhankaam's research table - a sample:
+.-----------------------.-----------------------------.
+|Company                | A  | B  | C  | D  | E  | F  |
+'-----------------------|-----------------------------|
+|Current Price          | 200| 300| 250| 100| 300| 50 |
+'-----------------------|-----------------------------|
+|Future Price Estimate  | 250| 400| 400| 120| 330| 50 |
+'-----------------------'-----------------------------'
+
+Create a program that makes Dhankaam happy. Note that the above table is only a sample. He would use the program with a completely different set of parameters.
+
+Algorithm -
+-----------
+1) iterate over the list of stocks
+2) calculate percentage of each stock, and prepare hash
+{stock_name => { stock_value, %}
+
+3) sort hash of hash based on the % value in decending order.
+
+4) iterate and add the stock value in a var and
+var < total_amount( amount to invest)
+
+5) if amount exceed than take next stock which
+can fit under the limit.
