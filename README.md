@@ -1,3 +1,3 @@
-# PerlCode
+# Coding playground 
 
-Programming practice in Perl
+This repository contains the code for various programs.
