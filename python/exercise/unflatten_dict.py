@@ -14,3 +14,5 @@ d = {'a.c.e': 30, 'a.c.d': 20, 'f': 40, 'a.b': 10}
 #d = {'a.c.e':30} 
 res = unflatten_dict(d)
 print(res)
+
+# {'f': 40, 'a': {'b': 10, 'c': {'d': 20, 'e': 30}}}

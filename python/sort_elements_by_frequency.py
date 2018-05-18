@@ -10,7 +10,8 @@ def sort_by_freq(arr):
         word_freq[word] = word_freq.get(word, 0) + 1
         
     lis = sorted(word_freq.items(), key = lambda x:x[1], reverse = True)
-    
+    print(lis)
+
     result = []
     for word,freq in lis:
         #print ("%-10s %d" % (word, freq))
