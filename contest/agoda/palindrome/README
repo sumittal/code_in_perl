@@ -1,0 +1,16 @@
+Directory Structure:
+palindrome/
+├── Dockerfile
+└── isPalindrome.py
+
+How to run:
+1) Build the image, i.e.:
+   docker build -t test/palindrome .
+2) Run a python program of checking palindrom in new container:
+   docker run test/palindrome python src/isPalindrome.py 'inputstring'
+
+Efficiency:
+There are muliple way to writing the program, but i chose regex to chop off the non alphanumeric charecters from the input string and then checked if it is palindrome or not. I used 'timeit' module to benchmark the code which was very much faster than other alternatives.
+
+Other alternative to ignore the special chars could be:
+string = "''.join(ch for ch in string if ch.isalnum())

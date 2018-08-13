@@ -1,0 +1,20 @@
+$ python friends_of_friend.py 
+List of friends:  [('A', 'B'), ('B', 'C'), ('B', 'D'), ('C', 'E'), ('D', 'E'), ('E', 'F'), ('F', 'A'), ('E', 'B')]
+2nd degree friend of A are :  ['C', 'D']
+
+
+List of friends:  [('A', 'B'), ('B', 'A')]
+No 2nd degree friends of A
+
+
+List of friends:  [('A', 'B'), ('B', 'C'), ('B', 'D')]
+2nd degree friend of A are :  ['C', 'D']
+
+
+List of friends:  [('A', 'B')]
+No 2nd degree friends of A
+
+
+List of friends:  [('A', 'A')]
+No 2nd degree friends of A
+

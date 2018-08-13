@@ -14,23 +14,23 @@ def reverseArray(arr, start, end):
 
 def leftRotate(arr, d):
     n = len(arr)
+    print("original array : ", arr)
     reverseArray(arr, 0, d-1)
     reverseArray(arr, d, n-1)
     reverseArray(arr, 0, n-1)
  
-    for i in range(len(arr)):
-        print(arr[i])
+    print("Left rotated array :" ,arr, end = '')
 
 def rightRotate(arr, d):
     n = len(arr)
     
+    print("original array :",arr)
     reverseArray(arr, 0, n-1)
     reverseArray(arr, 0, d-1)
     reverseArray(arr, d, n-1)
 
-    print(arr)
-    for i in range(len(arr)):
-        print(arr[i])
+    print("Right rotated array :" , arr, end = '')
+    print("\n\n")
         
 # Driver function to test above functions
 arr = [1, 2, 3, 4, 5, 6, 7]
