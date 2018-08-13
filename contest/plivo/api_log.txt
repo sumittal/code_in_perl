@@ -1,4 +1,12 @@
+$ pytest --capture=no test_api.py 
+========================================================================================================= test session starts =========================================================================================================
+platform linux2 -- Python 2.7.12, pytest-3.5.1, py-1.5.3, pluggy-0.6.0
+rootdir: /home/sumitm/projects/plivo, inifile:
+collecting 0 items                                                                                                                                                                                                                    /usr/local/lib/python2.7/dist-packages/requests/__init__.py:83: RequestsDependencyWarning: Old version of cryptography ([1, 2, 3]) may cause slowdown.
+  warnings.warn(warning, RequestsDependencyWarning)
+collected 1 item                                                                                                                                                                                                                      
 
+test_api.py 
 ===============================================
 Step 1 : authenticate and create the api object
 ===============================================
@@ -7,23 +15,23 @@ PASS: API authentication is successful
 ================================
 Step 2 : get the 2 phone numbers
 ================================
-Numbers:  ['18382222848', '18382222843']
+('Numbers: ', [u'18382222848', u'18382222843'])
 
 ==================================================
 Step 3: send the  message from one number to other
 ==================================================
-message uuid :  cb13cf74-9a26-11e8-9516-0265ce0ed80a
+('message uuid : ', u'7c8c9a56-9f1d-11e8-96c8-06f1d9fb32b2')
 
 =================================
 Step 4: get the detail of message
 =================================
-Details of message:  {'total_rate': '0.00350', 'message_type': 'sms', 'api_id': 'cb487634-9a26-11e8-8464-02f0efebfcdc', 'error_code': None, 'to_number': '18382222843', 'message_state': 'sent', 'total_amount': '0.00350', 'resource_uri': '/v1/Account/MAODUZYTQ0Y2FMYJBLOW/Message/cb13cf74-9a26-11e8-9516-0265ce0ed80a/', 'message_direction': 'outbound', 'message_time': '2018-08-07 15:16:44+05:30', 'units': 1, 'message_uuid': 'cb13cf74-9a26-11e8-9516-0265ce0ed80a', 'from_number': '18382222848'}
-price deducted :  0.00350
+('Details of message: ', {u'message_state': u'sent', u'total_amount': u'0.00350', u'error_code': None, u'to_number': u'18382222843', u'total_rate': u'0.00350', u'api_id': u'7ccd23b4-9f1d-11e8-bbfd-02af11be3b72', u'message_direction': u'outbound', u'from_number': u'18382222848', u'message_uuid': u'7c8c9a56-9f1d-11e8-96c8-06f1d9fb32b2', u'message_time': u'2018-08-13 22:52:42+05:30', u'units': 1, u'message_type': u'sms', u'resource_uri': u'/v1/Account/MAODUZYTQ0Y2FMYJBLOW/Message/7c8c9a56-9f1d-11e8-96c8-06f1d9fb32b2/'})
+('price deducted : ', u'0.00350')
 
 ===================================
 Step 5 - get the pricing of message
 ===================================
-outbound rate :  0.00350
+('outbound rate : ', u'0.00350')
 
 =======================================================================================
 Step 6 - verify the rate and the price deducted for the sending message, should be same
@@ -34,10 +42,13 @@ PASS: rate and the price deducted for the sending message are same
 ================================================================================
 Step 7 - check if account cash credit should be less than by the deducted amount
 ================================================================================
-cash_credits:  11.21829
+('cash_credits: ', u'11.14179')
 
 =================================================================================
 Step 8 - check if account cash credit should be more than by the deducted amount.
 =================================================================================
 PASS: account cash credit is more than the deducted amount.
 
+.
+
+====================================================================================================== 1 passed in 5.95 seconds ======================================================================================================
