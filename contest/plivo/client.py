@@ -1,5 +1,6 @@
 from collections import namedtuple
 from requests import Request, Session
+from exceptions import PlivoError, AuthenticationError
 
 PLIVO_API_URL = '/'.join(['https://api.plivo.com', 'v1/Account'])
 
@@ -16,10 +17,10 @@ def is_valid_account(account):
 def get_auth_credentials(auth_id, auth_token):
 
     if not (auth_id and auth_token):
-        raise ValueError("Auth id and Auth tokens are required")
+        raise AuthenticationError("Auth id and Auth tokens are required")
 
     if not is_valid_account(auth_id):
-        raise ValueError('Invalid auth_id passed: %s' % auth_id)
+        raise AuthenticationError('Invalid auth_id passed: %s' % auth_id)
 
     return AuthDetails(auth_id=auth_id, auth_token=auth_token)
 
@@ -55,7 +56,7 @@ class Client():
         response = self.session.send(prepped)
 
         if response.status_code not in [200, 202]:
-            raise Exception(
+            raise PlivoError(
                 'status code {status_code} for the HTTP  call '
                 '"{method}"'.format(
                     status_code=response.status_code, method=method))
