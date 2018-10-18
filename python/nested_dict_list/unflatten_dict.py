@@ -1,6 +1,6 @@
-def unflatten_dict(d):
+def unflatten_dict(in_dict):
     result = {}
-    for k,v in d.items():
+    for k,v in in_dict.items():
         keyss = k.split('.')
         d = result
         for key in keyss[:-1]:

@@ -1,1 +1,0 @@
-['Yes I have.', 'Just now. Man: No you didn’t!']
