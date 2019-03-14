@@ -1,17 +1,6 @@
 '''
-Write function that should return true if the target integer can be obtained by placing addition or subtraction operations in the list.
-
-Example :
-
-f(5, [5, 2]) = false. There's no way to add or subtract 5 and 2 to get 5.
-
-f(13, [3, 9, 3, 2]) = true. 3 + 9 + 3 - 2 = 13.
-
-f(0, []) = true
-
-f(1, []) = false
+Write function that should return true if the target integer can be obtained by placing addition or subtraction operations in the list
 '''
-
 def getWays(magic_number, numbers):
     if (util(numbers, 0, magic_number) > 0):
         return True
@@ -39,3 +28,4 @@ if (getWays(5, [5, 2])):
     print("True")
 else:
     print("False")
+
