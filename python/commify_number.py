@@ -16,7 +16,7 @@ def commify(num):
 
     out = ''.join(r)
     if s:
-        out += s
+        out = out + "." + s
     return out
 
 print(commify(1))
