@@ -1,7 +1,9 @@
 """
-The number of binary search trees can be seen as a recursive solution. i.e., Number of binary search trees = (Number of Left binary search sub-trees) * (Number of Right binary search sub-trees) * (Ways to choose the root)
+The number of binary search trees can be seen as a recursive solution. i.e., 
+Number of binary search trees = (Number of Left binary search sub-trees) * (Number of Right binary search sub-trees) * (Ways to choose the root)
 
-In a BST, only the relative ordering between the elements matter. So, without any loss on generality, we can assume the distinct elements in the tree are 1, 2, 3, 4, ...., n. Also, let the number of BST be represented by f(n) for n elements.
+In a BST, only the relative ordering between the elements matter. So, without any loss on generality, we can assume the 
+distinct elements in the tree are 1, 2, 3, 4, ...., n. Also, let the number of BST be represented by f(n) for n elements.
 
 Now we have the multiple cases for choosing the root.
 
